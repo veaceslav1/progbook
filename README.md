@@ -77,3 +77,7 @@ You may consider installing additional packages in atom IDE (In Atom Edit->Prefe
 # API-platform
 
 REST and GraphQL framework to build modern API-driven projects. See [site](https://api-platform.com/) and [documentation](https://api-platform.com/docs).
+
+# Vue
+
+[Vue](https://vuejs.org/) - front-end (JS application that talks to API server). The library used to write programs in JS for the browsers and mobile phones.
