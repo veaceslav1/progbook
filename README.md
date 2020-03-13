@@ -23,9 +23,13 @@ Here is an instruction on how to install __composer__ for current user only:
 
 ```bash
 cd ~
+
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
 php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
 php composer-setup.php --install-dir=~/.local/bin --filename=composer
+
 php -r "unlink('composer-setup.php');"
 ```
 Log out from your computer and log in to make sure `~/.local/bin` directory is in the `$PATH`.
@@ -94,6 +98,28 @@ Alternatively, you may install packages using Atom IDE using the menu path: Edit
 
 REST and GraphQL framework to build modern API-driven projects. See [site](https://api-platform.com/) and [documentation](https://api-platform.com/docs).
 
+# Node.js
+
+[Node.js](https://nodejs.org) allows Java Script to run on computer from comand line. It comes with own package management system (npm). To install node.js on Ubuntu see [instructions](https://github.com/nodesource/distributions/blob/master/README.md). Shortcut for version 12 for Ubuntu:
+
+```bash
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
 # Vue
 
 [Vue](https://vuejs.org/) - front-end (JS application that talks to API server). The library used to write programs in JS for the browsers and mobile phones.
+
+For a rich in features administration project can be used [vue-admin-template](https://github.com/PanJiaChen/vue-admin-template) (note that node.js npm is required for this installation):
+
+```bash
+git clone https://github.com/PanJiaChen/vue-admin-template.git
+
+cd vue-admin-template
+
+npm install
+
+npm run dev
+```
+Note that __vue-element-admin__ makes use of [eleme.io](https://element.eleme.io/#/en-US) library. Components documentation can be found [here](https://element.eleme.io/#/en-US/component).
