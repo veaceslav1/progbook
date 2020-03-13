@@ -40,9 +40,9 @@ echo $PATH
 
 Version control/collaboration.
 
-    ```bash
-    sudo apt install git
-    ```
+```bash
+sudo apt install git
+```
 
 # MySQL server
 
