@@ -10,32 +10,31 @@ This guide if focused on tools that run on Ubuntu/Linux operational system.
 
 PHP language is used for the back-end (API) server. To make sure the PHP is installed in your system:
 
-    ```bash
-    sudo apt update
-    sudo apt install curl php-cli php-mbstring git unzip
-    ```
+```bash
+sudo apt update
+sudo apt install curl php-cli php-mbstring git unzip
+```
 
 ## Composer
 
 A dependency manager for PHP ([site](https://getcomposer.org)):
 
-    ```bash
-    cd ~
-    curl -sS https://getcomposer.org/installer -o composer-setup.php
-    ```
+Here is an instruction on how to install __composer__ for current user only:
 
-Next, verify that the installer matches the SHA-384 hash for the latest installer found on the [Composer Public Keys / Signatures](https://composer.github.io/pubkeys.html) page. Copy the hash from that page and store it as a shell variable:
+```bash
+cd ~
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php --install-dir=~/.local/bin --filename=composer
+php -r "unlink('composer-setup.php');"
+```
+Log out from your computer and log in to make sure `~/.local/bin` directory is in the `$PATH`.
 
-    ```bash
-    HASH=544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061
-    ```
-Make sure that you substitute the latest hash for the highlighted value.
+To check if the `$PATH` variable contains `~/.local/bin` use:
 
-Now execute the following PHP script to verify that the installation script is safe to run:
-
-    ```bash
-    php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-    ```
+```bash
+echo $PATH
+```
 
 ## Git
 
@@ -49,26 +48,30 @@ Version control/collaboration.
 
 Database server.
 
-    ```bash
-    sudo apt install mysql-server
-    ```
+```bash
+sudo apt install mysql-server
+```
 
-User interface for MySQL server for convenience:
+MySQLWorkbench (optional) will help to visualise databases.
 
-    ```bash
-    sudo apt install phpmyadmin
-    ```
-After installation visit: http://localhost/phpmyadmin
+```bash
+sudo apt install mysql-workbench
+```
 
 # Atom
 
 Development IDE
 
-    ```bash
-    sudo apt install atom
-    ```
+```bash
+sudo apt install atom
+```
 
-You may consider installing additional packages in atom IDE (In Atom Edit->Preferences->Install)L atom-vue, ide-vue, terminal-tab, vim-mode-plus
+Install additional packages:
+
+```bash
+apm i atom-vue ide-vue terminal-tab vim-mode-plus docblockr
+```
+Alternatively, you may install packages using Atom IDE using the menu path: Edit->Preferences->Install.
 
 # Symfony
 
