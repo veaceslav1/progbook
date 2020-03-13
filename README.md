@@ -48,8 +48,8 @@ In your home directory create a file called ```.gitconfig``` and write in it you
 
 ```ini
 [user]
-	name = Your Name
-	email = yourgitemail@example.com
+    name = Your Name
+    email = yourgitemail@example.com
 [push]
     default = matching
 [credential "https://github.com"]
