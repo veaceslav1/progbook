@@ -51,9 +51,9 @@ In your home directory create a file called ```.gitconfig``` and write in it you
 	name = Your Name
 	email = yourgitemail@example.com
 [push]
-	default = matching
+    default = matching
 [credential "https://github.com"]
-  username = yourgitusername
+    username = yourgitusername
 ```
 This file will simplify the pushing to git process. You will not need to provide your username at every push command.
 
