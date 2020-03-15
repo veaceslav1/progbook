@@ -80,7 +80,7 @@ sudo apt install mysql-workbench
 Development IDE
 
 ```bash
-snap apt install atom
+sudo snap install atom
 ```
 
 Install additional packages:
