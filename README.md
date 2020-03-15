@@ -12,7 +12,7 @@ PHP language is used for the back-end (API) server. To make sure the PHP is inst
 
 ```bash
 sudo apt update
-sudo apt install curl php-cli php-mbstring git unzip
+sudo apt install curl php-cli php-mbstring git unzip php-xml
 ```
 
 ## Composer
@@ -80,7 +80,7 @@ sudo apt install mysql-workbench
 Development IDE
 
 ```bash
-sudo apt install atom
+snap apt install atom
 ```
 
 Install additional packages:
