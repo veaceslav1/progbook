@@ -100,6 +100,35 @@ REST and GraphQL framework to build modern API-driven projects. See [site](https
 
 # Node.js
 
+## On development machines:
+
+### Install NVM.
+
+```bash
+cd ~
+
+git clone https://github.com/nvm-sh/nvm.git .nvm
+```
+
+Append the following lines to your ~/.bashrc file:
+
+```bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
+Close and open the terminal.
+
+### Install node for local user using NVM:
+
+```bash
+nvm install node
+```
+
+[More](https://github.com/nvm-sh/nvm) on nvm.
+
+## On production machines:
 [Node.js](https://nodejs.org) allows Java Script to run on computer from comand line. It comes with own package management system (npm). To install node.js on Ubuntu see [instructions](https://github.com/nodesource/distributions/blob/master/README.md). Shortcut for version 12 for Ubuntu:
 
 ```bash
