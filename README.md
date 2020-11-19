@@ -123,3 +123,15 @@ npm install
 npm run dev
 ```
 Note that __vue-element-admin__ makes use of [eleme.io](https://element.eleme.io/#/en-US) library. Components documentation can be found [here](https://element.eleme.io/#/en-US/component).
+
+# Certbot
+
+Getting https on.
+
+```bash
+
+# Dry test
+certbot --dry-run certonly --manual --preferred-challenges=dns -d [domain.name]
+```
+
+See https://dns.he.net for ddns.
